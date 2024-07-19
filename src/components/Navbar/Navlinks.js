@@ -18,36 +18,35 @@ const Navlinks = () => {
       <div className="flex items-center xl:space-x-8 space-x-4 max-md:hidden">
         <Link
           href="/"
-          className="text-mblack
-           text-lg font-semibold hover:text-gray-500"
+          className="text-mblack text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
         >
           Home
         </Link>
         <Link
           href="/about"
           className="text-mblack
-           text-lg font-semibold hover:text-gray-500"
+           text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
         >
           About us
         </Link>
         <Link
           href="/technology"
           className="text-mblack
-           text-lg font-semibold hover:text-gray-500"
+           text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
         >
           Technologies
         </Link>
         <Link
           href="/services"
           className="text-mblack
-           text-lg font-semibold hover:text-gray-500"
+           text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
         >
           Services
         </Link>
         <Link
           href="/contact"
           className="text-mblack
-           text-lg font-semibold hover:text-gray-500"
+           text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
         >
           Contact us
         </Link>
@@ -61,7 +60,7 @@ const Navlinks = () => {
             href="/"
             onClick={closeMenu}
             className="text-mblack
-             text-lg font-semibold mb-4 hover:text-gray-500"
+             text-lg font-semibold mb-4 hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
           >
             Home
           </Link>
@@ -69,7 +68,7 @@ const Navlinks = () => {
             href="/about"
             onClick={closeMenu}
             className="text-mblack
-             text-lg font-semibold mb-4 hover:text-gray-500"
+             text-lg font-semibold mb-4 hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
           >
             About us
           </Link>
@@ -77,7 +76,7 @@ const Navlinks = () => {
             href="/technology"
             onClick={closeMenu}
             className="text-mblack
-             text-lg font-semibold mb-4 hover:text-gray-500"
+             text-lg font-semibold mb-4 hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
           >
             Technologies
           </Link>
@@ -85,7 +84,7 @@ const Navlinks = () => {
             href="/services"
             onClick={closeMenu}
             className="text-mblack
-             text-lg font-semibold mb-4 hover:text-gray-500"
+             text-lg font-semibold mb-4 hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
           >
             Services
           </Link>
@@ -93,7 +92,7 @@ const Navlinks = () => {
             href="/contact"
             onClick={closeMenu}
             className="text-mblack
-             text-lg font-semibold hover:text-gray-500"
+             text-lg font-semibold hover:text-gray-500 transform transition-transform duration-200 hover:scale-105"
           >
             Contact us
           </Link>
