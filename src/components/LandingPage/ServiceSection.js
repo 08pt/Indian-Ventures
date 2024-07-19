@@ -2,14 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const ServiceCard = ({ image, title, content }) => {
+const ServiceCard = ({ image, title, content, isHovered }) => {
   return (
-    <div className="relative max-w-xs overflow-hidden justify-center items-center mx-auto manrope">
-      <div className="flex items-center justify-center bg-white ">
+    <div className="relative max-w-xs overflow-hidden justify-center items-center mx-auto manrope card-container">
+      <div className="flex items-center justify-center bg-white">
         <Image src={image} alt={`Service`} className="w-52 h-52" />
-        <div className="absolute top-0 left-0 w-auto h-full opacity-0 hover:opacity-100 grid grid-cols-1 gap-1 transition-opacity duration-300 items-center justify-center bg-black bg-opacity-50 text-white shadow-inner rounded-md mx-auto cursor-pointer shadow-black px-4 py-6">
+        <div
+          className={`absolute top-0 left-0 w-auto h-full ${
+            isHovered ? "card-content-hover" : "card-content"
+          } grid grid-cols-1 gap-1 transition-opacity duration-300 items-center justify-center bg-teal-800 text-white shadow-inner rounded-md mx-auto cursor-pointer shadow-black px-4 py-6`}
+        >
           <h3 className="text-center font-bold text-2xl">{title}</h3>
-          <p className="text-center text-lg">{content}</p>
+          <p className="text-center text-base">{content}</p>
         </div>
       </div>
     </div>
@@ -39,6 +43,7 @@ function ServiceSection({ services }) {
             image={service.image}
             content={service.content}
             title={service.title}
+            isHovered={hoveredIndex === index}
           />
         </div>
       ))}
