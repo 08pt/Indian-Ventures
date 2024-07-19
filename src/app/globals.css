@@ -70,7 +70,6 @@
 }
 
 .card-container:hover {
-  border: 2px solid #3498db; /* Change to your preferred color */
   animation: rotateCard 0.5s ease-in-out, pulseCard 1s ease-in-out infinite;
 }
 
