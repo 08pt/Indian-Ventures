@@ -4,7 +4,7 @@ import techData from "@/data/techData";
 function TechSection() {
   return (
     <div className="mt-16 text-center ">
-      <div className="flex flex-wrap justify-center gap-x-10 mx-auto gap-y-6 px-2  ">
+      <div className="flex flex-wrap justify-center gap-x-10 mx-auto gap-y-6 px-2 animation-r-l  ">
         {techData.map((tech, index) => (
           <TechCards
             imageUrl={tech.imageUrl}
@@ -16,7 +16,7 @@ function TechSection() {
         ))}
       </div>
 
-      <p className="font-bold text-black mt-8  text-lg sm:text-2xl manrope">
+      <p className="font-bold text-black mt-20  text-lg sm:text-2xl manrope">
         We Offer Best IT Services
       </p>
       <p className="mt-2 text-lg sm:text-2xl manrope">

@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const ServiceCard = ({ image, title, content, isHovered }) => {
   return (
-    <div className="relative max-w-xs overflow-hidden justify-center items-center mx-auto manrope card-container">
+    <div className="relative max-w-xs overflow-hidden justify-center items-center mx-auto manrope card-container service-card">
       <div className="flex items-center justify-center bg-white">
         <Image src={image} alt={`Service`} className="w-52 h-52" />
         <div
@@ -22,6 +22,8 @@ const ServiceCard = ({ image, title, content, isHovered }) => {
 
 function ServiceSection({ services }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isAnimated, setIsAnimated] = useState(false);
+  const sectionRef = useRef(null);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -31,8 +33,37 @@ function ServiceSection({ services }) {
     setHoveredIndex(null);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsAnimated(true);
+          observer.disconnect(); // Stop observing after animation is triggered
+        }
+      },
+      {
+        threshold: 0.1, // Adjust based on when you want to trigger the animation
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center mx-2 px-2 sm:mx-auto">
+    <div
+      ref={sectionRef}
+      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center mx-2 px-2 sm:mx-auto service-section ${
+        isAnimated ? "animate" : ""
+      }`}
+    >
       {services.map((service, index) => (
         <div
           key={index}
