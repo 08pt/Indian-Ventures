@@ -71,8 +71,9 @@ function HeroSection() {
       <TechSection />
       <Industries />
       <Form />
-      <Testimonials />
       <Brands />
+
+      <Testimonials />
     </div>
   );
 }
