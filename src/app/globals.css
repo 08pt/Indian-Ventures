@@ -125,3 +125,54 @@
 .service-card {
   animation: scaleUp 0.5s ease-out;
 }
+/* Add this CSS to your global styles or a CSS module */
+.link-stroke {
+  position: relative;
+}
+
+.link-stroke:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+  transition: width 0.5s;
+}
+
+.link-stroke:hover:after {
+  width: 100%;
+}
+
+.link-fill {
+  position: relative;
+  transition: color 0.5s;
+}
+
+.link-fill:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: black;
+  z-index: -1;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+}
+
+.link-fill:hover {
+  color: white;
+}
+
+.link-fill:hover:after {
+  transform: scaleX(1);
+  opacity: 1;
+}
