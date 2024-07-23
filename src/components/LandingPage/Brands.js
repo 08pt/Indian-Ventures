@@ -45,15 +45,15 @@ const Brands = () => {
           {logos.map((brand, index) => (
             <div
               key={index}
-              className="max-w-xs overflow-hidden justify-center items-center mx-auto mt-10"
+              className="max-w-xs overflow-hidden flex justify-center items-center mx-auto mt-10"
             >
-              <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black">
+              <div className="flex items-center justify-center bg-white shadow-inner rounded-full p-8 mx-4 shadow-black  ">
                 <Image
                   src={brand}
                   alt={`Brand ${index}`}
                   width={200}
                   height={200}
-                  className="w-24 h-32"
+                  className="w-24 h-24 sm:w-32 sm:h-32 rounded-full"
                 />
               </div>
             </div>
