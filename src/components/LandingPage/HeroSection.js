@@ -62,9 +62,9 @@ function HeroSection() {
       </p>
       <ServiceSection services={services} />
       <Link href="/services">
-        <button className="relative mt-10 text-sm sm:text-lg manrope sm:px-10 px-7 py-2 rounded-lg flex justify-center mx-auto items-center font-bold overflow-hidden group border-2 border-teal-600 hover:text-white">
+        <button className="relative mt-10 text-sm sm:text-lg manrope sm:px-10 px-7 py-2 rounded-lg flex justify-center mx-auto items-center font-bold overflow-hidden group border-2 border-gray-500 hover:text-white">
           <span className="relative z-10">Read More</span>
-          <span className="absolute inset-0 bg-teal-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100 "></span>
+          <span className="absolute inset-0 bg-gray-800 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100 "></span>
         </button>
       </Link>
       <Heading>TECHNOLOGIES</Heading>
