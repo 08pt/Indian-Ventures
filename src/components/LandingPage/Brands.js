@@ -47,13 +47,13 @@ const Brands = () => {
               key={index}
               className="max-w-xs overflow-hidden flex justify-center items-center mx-auto mt-10"
             >
-              <div className="flex items-center justify-center bg-white shadow-inner rounded-full p-8 mx-4 shadow-black  ">
+              <div className="flex items-center justify-center bg-gray-100 shadow-inner rounded-full p-8 mx-4 shadow-black  ">
                 <Image
                   src={brand}
                   alt={`Brand ${index}`}
                   width={200}
                   height={200}
-                  className="w-24 h-24 sm:w-32 sm:h-32 rounded-full"
+                  className="w-20 h-20 sm:w-28 sm:h-28 rounded-full"
                 />
               </div>
             </div>

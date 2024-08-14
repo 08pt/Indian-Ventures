@@ -8,17 +8,19 @@ import { MdLocalPharmacy } from "react-icons/md";
 import { GrTechnology } from "react-icons/gr";
 import { FcAutomotive } from "react-icons/fc";
 import { BsBank } from "react-icons/bs";
+import { FaBuilding, FaPlane, FaFilm, FaRegHospital } from "react-icons/fa";
 
 const INDUSTRIES = [
-  { Icon: FcShop, name: "E-Commerce", color: "#001F3F" },
-  { Icon: GiHealthDecrease, name: "Healthcare", color: "#007BFF" },
-  { Icon: MdLocalPharmacy, name: "Pharma", color: "#28A745" },
-  { Icon: GrTechnology, name: "Technology", color: "#20C997" },
-  { Icon: FcShop, name: "E-Commerce", color: "#001F3F" },
   { Icon: FcAutomotive, name: "Automotive", color: "#DC3545" },
+  { Icon: FaPlane, name: "Aviation", color: "#17A2B8" },
   { Icon: BsBank, name: "Bank", color: "#00CCC7" },
+  { Icon: FcShop, name: "E-Commerce", color: "#001F3F" },
+  { Icon: FaFilm, name: "Entertainment", color: "#DC3545" },
+  { Icon: GiHealthDecrease, name: "Healthcare", color: "#007BFF" },
+  { Icon: FaRegHospital, name: "Medical", color: "#6F42C1" },
+  { Icon: MdLocalPharmacy, name: "Pharma", color: "#28A745" },
+  { Icon: FaBuilding, name: "Real Estate", color: "#FFC107" },
   { Icon: GrTechnology, name: "Technology", color: "#20C997" },
-  { Icon: FcAutomotive, name: "Automotive", color: "#DC3545" },
 ];
 
 const responsive = {
@@ -55,7 +57,7 @@ const Industries = () => {
         We make happy clients by interconnecting technology with business & art.
       </p>
 
-      <div className="max-w-screen-2xl mx-auto px-3 ">
+      <div className="max-w-screen-2xl mx-auto px-5 ">
         <Carousel
           autoPlay={true}
           responsive={responsive}

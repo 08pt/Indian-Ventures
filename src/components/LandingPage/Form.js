@@ -111,7 +111,7 @@ const Form = () => {
   };
 
   return (
-    <div className="manrope py-5 sm:mx-28 mx-2 animation-r-l">
+    <div className="manrope py-5 sm:mx-28 mx-2 ">
       <h3 className="text-center font-bold text-lg sm:text-2xl">
         PARTNER WITH US FOR YOUR BUSINESS GROWTH AND BEYOND
       </h3>

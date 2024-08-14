@@ -11,7 +11,7 @@ const manrope_init = Manrope({
 });
 export const metadata = {
   title: "Indian Ventures",
-  description: "A Service Provider Website",
+  description: "Innovating Web & Digital Solutions",
 };
 
 export default function RootLayout({ children }) {
